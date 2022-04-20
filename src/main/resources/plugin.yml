@@ -1,0 +1,4 @@
+name: XPDeathDropFix
+main: com.budderman18.XPDeathDropFix.Main
+version: 1.0
+api-version: 1.13
