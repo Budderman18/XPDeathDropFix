@@ -1,4 +1,6 @@
 name: XPDeathDropFix
 main: com.budderman18.XPDeathDropFix.Main
-version: 1.0
+author: Budderman18
+description: Fixes the bug where xp is capped to 100 when dying
+version: 1.0.1
 api-version: 1.13
