@@ -22,7 +22,7 @@ public class Main extends JavaPlugin implements Listener {
     * If its not, warn the player about lacking support
     * Checks if server is running offline mode
     * If it is, disable the plugin
-    * Also loads commands and events
+    * Also loads death event
     *
     */
     @Override
@@ -69,14 +69,15 @@ public class Main extends JavaPlugin implements Listener {
     /*
     *
     * This method hadles everything involving fixing the xp
-    * IT'll set the dropped xp to be half of the polayer's xp
+    * It'll set the dropped xp to be half of the player's xp
     * like the vanilla game does, with no dumbass
     * limit. (Why is this not fixed in vanilla?)
     *
     */
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event) {
-        int xp = (((int) ((event.getEntity().getExpToLevel() * event.getEntity().getLevel())/2 + event.getEntity().getExp()/2)))/2;
+        //set new value
+        int xp = (event.getEntity().getTotalExperience()/2);
         event.setDroppedExp(xp);
     }
 }   
